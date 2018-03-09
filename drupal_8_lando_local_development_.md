@@ -34,6 +34,12 @@ Access the directory:
 $ cd ~/training/
 ```
 
+## Lando way:
+
+```bash
+$ lando composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+```
+
 ## Composer way:
 
 If you have composer available from your system, execute:
