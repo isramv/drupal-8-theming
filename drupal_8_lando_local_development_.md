@@ -36,35 +36,12 @@ $ cd ~/training/
 
 ## Lando way:
 
-```bash
-$ lando composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
-```
-
-## Composer way:
-
-If you have composer available from your system, execute:
-
-```bash
-$ composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
-```
-
-## Git way:
-
-```bash
-$ git clone git@github.com:drupal-composer/drupal-project.git drupal
-```
-## Lando init
-
-In order to use Lando we need a `.lando.yml` file, this lando file should contain All the things you require to run and develop our first theme.
-
-then we are going to init a Drupal 8 project:
+`lando init` is going to generate a `.lando.yml` file, which has the basic settings/requirement for a Drupal 8 site.
 
 ```bash
 $ lando init --recipe drupal8
 ```
 You are going to answer the following questions:
-
-in the following example I decided to call my lando project: drupal-8-theme-development, you can name it whatever you want:
 
 ```bash
 $ ? Where is your webroot relative to the init destination? drupal/web
@@ -80,17 +57,16 @@ $ ls -la
 
 Using `$ lando info` you'll be able to see the basic configuration of your web application.
 
-# Using Lando Composer to install D8
+`lando start` is downloading the docker images required to run our next command.
 
 ```bash
-$ lando composer install
+$ lando start
 ```
 
+with `lando composer` we are going to generate a new Drupal 8 site instance.
 
+```bash
+$ lando composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+```
 
-
-
-
-  
-  
-  
+## Configuring Drupal.
