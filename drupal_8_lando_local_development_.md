@@ -21,18 +21,33 @@ Open the terminal, iTerm or similar:
 for the purpuse of this training create a empty directory:
 
 ```bash
-$ mkdir ~/drupal_8_training 
+$ mkdir ~/training
 ```
 or
 ```bash
-$ mkdir $HOME/drupal_8_training
+$ mkdir $HOME/training
 ```
 
 Access the directory:
 
 ```bash
-$ cd ~/drupal_8_training/
+$ cd ~/training/
 ```
+
+## Composer way:
+
+If you have composer available from your system, execute:
+
+```bash
+$ composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+```
+
+## Git way:
+
+```bash
+$ git clone git@github.com:drupal-composer/drupal-project.git drupal
+```
+## Lando init
 
 In order to use Lando we need a `.lando.yml` file, this lando file should contain All the things you require to run and develop our first theme.
 
@@ -46,8 +61,8 @@ You are going to answer the following questions:
 in the following example I decided to call my lando project: drupal-8-theme-development, you can name it whatever you want:
 
 ```bash
-$ ? Where is your webroot relative to the init destination? .
-$ ? What do you want to call this app? drupal-8-theme-development
+$ ? Where is your webroot relative to the init destination? drupal/web
+$ ? What do you want to call this app? D8 theming
 ```
 
 All the files that are begin with dot like: `.lando.yml` aren't visible with the command `ls`
@@ -59,11 +74,7 @@ $ ls -la
 
 Using `$ lando info` you'll be able to see the basic configuration of your web application.
 
-Next step is to use:
-
-```bash
-lando composer create-project drupal-composer/drupal-project:8.x-dev webroot --stability dev --no-interaction
-```
+# Using Lando Composer to install D8
 
 ```bash
 $ lando composer install
