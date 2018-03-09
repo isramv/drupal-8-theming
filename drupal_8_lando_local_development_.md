@@ -42,6 +42,7 @@ $ cd ~/training/
 $ lando init --recipe drupal8
 ```
 You are going to answer the following questions:
+I suggest using **drupal/web** for the first question, since we are going to generate a project with lando composer in the next step.
 
 ```bash
 $ ? Where is your webroot relative to the init destination? drupal/web
